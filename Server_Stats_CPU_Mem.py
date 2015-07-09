@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from __future__ import division
+from __future__ import division # lets us do some "real" division.
 import statsd # this is python-statsd, NOT the default statsd library
 import os
 import sys
@@ -13,8 +13,8 @@ except ImportError:
 	print "Exiting..."
 	sys.exit()
 
-STATSD_URL = 'statsd.livestream.com'
-STATSD_PORT = 8125
+#STATSD_URL = 'statsd.myserver.com' or custom destination
+#STATSD_PORT = 8125
 
 def cpu_stats():
 	p = psutil
