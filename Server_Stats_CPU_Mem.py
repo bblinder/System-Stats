@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+"""Uses 'psutil' to gather CPU and Memory usage statistics"""
+
 from __future__ import division # lets us do some "real" division.
 import statsd # this is python-statsd, NOT the default statsd library
 import os

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+"""Uses 'psutil' to gather stats on a system's swap memory usage"""
+
 from __future__ import division # lets us do "real" division
 import os
 import statsd # this is python-statsd, not the default StatsD library

@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+"""Uses 'psutil' to gather stats on general disk usage"""
+
 from __future__ import division # lets us do some "real" division
 import statsd # this is python-statsd, NOT the default statsd library
 import os
@@ -17,7 +19,11 @@ except ImportError:
 
 def disk_usage(): # gathering disk usage stats
 	p = psutil
-	usage = p.disk_usage('/')
+	"""The below is a very general parameter and will gather stats
+	for the entire disk ('/'). It can be focused on specific disks or
+	partitions (using `psutil.disk_partitions()`)
+	"""
+	usage = p.disk_usage('/') 
 	
 	used = usage.total - usage.free
 	a1 = int(used / 1024 / 1024 / 1024)
