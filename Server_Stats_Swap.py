@@ -15,7 +15,7 @@ except ImportError:
 	sys.exit()
 
 STATSD_URL = 'statsd.myserver.com' # or whatever destination
-STATSD_PORT = 8125 # just as an example
+STATSD_PORT = 8125 # default StatsD port 
 
 p = psutil
 swap = p.swap_memory()
