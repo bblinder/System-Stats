@@ -25,21 +25,20 @@ a2 = int(swap.total / 1024 / 1024)
 
 swap_percentage = (a1 / a2) * 100
 
-def get_swap_stats():
+def get_swap_stats(): # gather swap memory stats
 	print "Swap Usage: %sM / %sM" % (a1, a2)
 	print "Usage: %s%%" % swap_percentage
 
-def send_swap_stats():
+def send_swap_stats(): # sends swap stats to StatsD/Graphite
 	GAUGE_NODE = 'noc.server_stats.test_machine.mem_swap'
 
-	statsd_connection = statsd.Connection(host='statsd.livestream.com', port=8125, sample_rate=1)
+	statsd_connection = statsd.Connection(host=STATSD_URL, port=STATSD_PORT, sample_rate=1)
 	gauge = statsd.Gauge(GAUGE_NODE, statsd_connection)
 	gauge.send('count', swap_percentage)
 
 if __name__ == '__main__':
 	get_swap_stats()
 	send_swap_stats()
-
 
 
 """Something to experiment with later
