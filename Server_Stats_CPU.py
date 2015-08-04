@@ -12,7 +12,7 @@ except ImportError:
 	sys.exit()
 
 
-STATSD_URL = 'statsd.myserver.com'
+STATSD_URL = 'statsd.livestream.com'
 STATSD_PORT = 8125
 
 p = psutil
