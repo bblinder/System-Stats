@@ -12,7 +12,7 @@ except ImportError:
 	print "Exiting..."
 	sys.exit()
 
-STATSD_URL = 'statsd.livestream.com'
+STATSD_URL = 'statsd.myserver.com'
 STATSD_PORT = 8125
 
 def disk_usage(): # gathering disk usage stats

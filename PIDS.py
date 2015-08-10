@@ -7,7 +7,7 @@ import os
 import statsd
 import sys
 
-STATSD_URL = 'statsd.livestream.com'
+STATSD_URL = 'statsd.myserver.com'
 STATSD_PORT = 8125
 
 def process_list():
