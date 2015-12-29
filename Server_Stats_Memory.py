@@ -2,7 +2,7 @@
 
 from __future__ import division # lets us do "real" division
 import datetime
-import statsd # this is python-statsd, NOT the default statsd library
+import statsd # this is python-statsd, NOT the default/etsy statsd library
 import os
 import sys
 
